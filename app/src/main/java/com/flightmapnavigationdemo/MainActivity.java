@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Mapbox.getInstance(this, "2e769c60-174c-11ea-acdf-896965e04014");
+        Mapbox.getInstance(this, "");
 
         setContentView(R.layout.activity_main);
         mapView = findViewById(R.id.mapView);
@@ -134,7 +134,7 @@ addMarker(new LatLng(destinationPoint.latitude(),destinationPoint.longitude()));
 //    pk.eyJ1Ijoia2FyYW52ZWVyMDgiLCJhIjoiY2tjanhkemVqMWRnNjJxcXFudWF0N2V6cCJ9.bYD5g9pWTgXF11u5ft4Bkw
     private void getRoute(Point origin, Point destination) {
         NavigationRoute.builder(this)
-                .accessToken("2e769c60-174c-11ea-acdf-896965e04014")
+                .accessToken(Mapbox.getAccessToken())
                 .origin(origin)
                 .destination(destination)
                 .build()
@@ -178,7 +178,7 @@ addMarker(new LatLng(destinationPoint.latitude(),destinationPoint.longitude()));
             locationComponent = mapboxMap.getLocationComponent();
             locationComponent.activateLocationComponent(this, loadedMapStyle);
             locationComponent.setLocationComponentEnabled(true);
-// Set the component's camera mode
+// Set the component's camera mode for tracking
             locationComponent.setCameraMode(CameraMode.TRACKING);
         } else {
             permissionsManager = new PermissionsManager(this);
