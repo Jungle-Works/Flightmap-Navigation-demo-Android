@@ -11,7 +11,8 @@ SDK and Maps SDK dependency lines are not listed in the installation code snippe
 - In the module-level build.gradle (root project) file, add the following dependencies
 // in addition to the rest of your build.gradle contents
 // you should include the following repository and dependencies
-> **_NOTE:_**
+
+```bash
 allprojects {
     repositories {
         google()
@@ -22,10 +23,12 @@ allprojects {
         maven { url 'https://dl.bintray.com/flightmap/flightmapjavasdk' }
     }
 }
+```
+
 
 - In the app module -level build.gradle (app module) add the following dependencies
 before implementing  the library Please Add :- 
-> **_NOTE:_**
+```bash
 android {
  compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -36,9 +39,9 @@ android {
   implementation 'flightmapsdk.flightmaplightsdk:flightmap: 1.4.0'
 // dependency for FLightmap Navigation Sdk
   implementation 'flightmapnavigationsdk:mapbox-android-navigation-ui:1.5.2'
-  
+  ```
 # Manifest.xml
--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 # To create NavigationRouteOptions:
     private void getRoute(Point origin, Point destination) {
