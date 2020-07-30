@@ -77,7 +77,9 @@ android {
                     }
                 });
     }
-    <img src="https://github.com/Jungle-Works/Flightmap-Navigation-demo-Android/blob/master/destinatonroute.gif" width="300" />
+    
+    
+  - <img src="https://github.com/Jungle-Works/Flightmap-Navigation-demo-Android/blob/master/destinatonroute.gif" width="300" />
 
 
 
@@ -95,4 +97,6 @@ android {
                         NavigationLauncher.startNavigation(MainActivity.this, options);
                     }
                 });
-    <img src="https://github.com/Jungle-Works/Flightmap-Navigation-demo-Android/blob/master/startnavigation.gif" width="300" />
+               
+               
+  -  <img src="https://github.com/Jungle-Works/Flightmap-Navigation-demo-Android/blob/master/startnavigation.gif" width="300" />
