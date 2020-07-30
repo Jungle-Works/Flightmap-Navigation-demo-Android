@@ -8,9 +8,7 @@ The build.gradle file is used to configure the build and list dependencies. You 
 Declaring this dependency will automatically pull in both the FlightMap Navigation SDK for Android and the FlightMap Maps SDK for Android. This is why the core Navigation 
 SDK and Maps SDK dependency lines are not listed in the installation code snippet below.
 
-- In the module-level build.gradle (root project) file, add the following dependencies
-// in addition to the rest of your build.gradle contents
-// you should include the following repository and dependencies
+- In the module-level build.gradle (root project) file, add the following dependencies in your your build.gradle (root) contents
 
 ```bash
 allprojects {
@@ -41,7 +39,8 @@ android {
   implementation 'flightmapnavigationsdk:mapbox-android-navigation-ui:1.5.2'
   ```
 # Manifest.xml
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 # To create NavigationRouteOptions:
     private void getRoute(Point origin, Point destination) {
